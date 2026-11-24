@@ -1,0 +1,11 @@
+pandas>=2.2,<3
+numpy>=1.26,<3
+scipy>=1.12
+statsmodels>=0.14
+scikit-learn>=1.4
+yfinance>=1.8
+SQLAlchemy>=2.0,<3
+psycopg2-binary>=2.9
+plotly>=5.20
+streamlit>=1.67
+python-dotenv>=1.0

@@ -1,0 +1,74 @@
+# Streamlit configuration for the Financial Market Intelligence dashboard.
+# Reference: https://docs.streamlit.io/develop/api-reference/configuration/config.toml
+
+[client]
+# "minimal" removes framework controls (Deploy, Rerun, Settings, Print, Record screencast) from
+# the toolbar and main menu. Only options set externally (e.g. st.set_page_config menu items)
+# would appear. Use "developer" locally if you need the rerun/settings controls while coding.
+toolbarMode = "minimal"
+# Navigation is built explicitly with st.navigation in app/streamlit_app.py.
+showSidebarNavigation = true
+# Show a short message instead of a full traceback to dashboard viewers.
+showErrorDetails = "stacktrace"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+runOnSave = false
+
+[runner]
+fastReruns = true
+
+# ---------------------------------------------------------------------------------------------
+# Theme. Both palettes are defined, so the app follows the viewer's operating-system setting.
+# Colours follow the validated reference palette in docs/RESEARCH.md (section "Visual design").
+# ---------------------------------------------------------------------------------------------
+[theme]
+font = "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+codeFont = "ui-monospace, 'Cascadia Mono', Consolas, monospace"
+baseFontSize = 14
+headingFontSizes = ["1.25rem", "1.05rem", "0.95rem", "0.9rem", "0.85rem", "0.8rem"]
+headingFontWeights = [600, 600, 600, 600, 600, 600]
+metricValueFontSize = "1.45rem"
+metricValueFontWeight = 600
+baseRadius = "6px"
+buttonRadius = "6px"
+showWidgetBorder = true
+showSidebarBorder = true
+paddingTop = "2.25rem"
+
+[theme.light]
+primaryColor = "#2a78d6"
+backgroundColor = "#f6f6f4"
+secondaryBackgroundColor = "#ecebe7"
+textColor = "#141413"
+borderColor = "#dcdbd4"
+dataframeBorderColor = "#e1e0d9"
+dataframeHeaderBackgroundColor = "#f0efec"
+linkColor = "#1c5cab"
+greenColor = "#0a7d0a"
+redColor = "#c43333"
+chartCategoricalColors = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948"]
+
+[theme.light.sidebar]
+backgroundColor = "#fcfcfb"
+secondaryBackgroundColor = "#f0efec"
+
+[theme.dark]
+primaryColor = "#3987e5"
+backgroundColor = "#111110"
+secondaryBackgroundColor = "#222220"
+textColor = "#f0efec"
+borderColor = "#34342f"
+dataframeBorderColor = "#2c2c2a"
+dataframeHeaderBackgroundColor = "#1d1d1b"
+linkColor = "#86b6ef"
+greenColor = "#0ca30c"
+redColor = "#e66767"
+chartCategoricalColors = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#0ca30c", "#9085e9", "#e66767"]
+
+[theme.dark.sidebar]
+backgroundColor = "#171716"
+secondaryBackgroundColor = "#222220"
